@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, .wrapper {
+    height: 100%;
+}
+
+header, footer {
+    background-color: green;
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.logo {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+}
+.service {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service > div {
+    width: 17%;
+    border: red 1px solid;
+}
+
+.service > div:nth-child(2) {
+    flex-grow: 1;
+}
+
+.service > div:nth-child(4) {
+    flex-grow: 2;
+}
+
+.service > div:nth-child(5) {
+    flex-grow: 1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
