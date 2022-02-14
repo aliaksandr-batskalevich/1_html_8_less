@@ -14,7 +14,7 @@ header, footer {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -24,28 +24,34 @@ header, footer {
     width: 70px;
     background-color: red;
 }
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .service {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .service > div {
-    width: 17%;
+    flex-basis: 17%;
     border: red 1px solid;
 }
 
-.service > div:nth-child(2) {
-    flex-grow: 1;
-}
+/*.service > div:nth-child(2) {*/
+/*    flex-grow: 1;*/
+/*}*/
 
-.service > div:nth-child(4) {
-    flex-grow: 2;
-}
+/*.service > div:nth-child(4) {*/
+/*    flex-grow: 2;*/
+/*}*/
 
-.service > div:nth-child(5) {
-    flex-grow: 1;
-}
+/*.service > div:nth-child(5) {*/
+/*    flex-grow: 1;*/
+/*}*/
 
 .wrapper {
     display: flex;
@@ -55,3 +61,36 @@ header, footer {
 main {
     flex-grow: 1;
 }
+
+@media (max-width: 1100px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 950px) {
+    .service {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .service > div {
+        flex-basis: 30%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 510px) {
+    .service > div {
+        flex-basis: 80%;
+    }
+}
+
+/*@media (max-width: 760px) {*/
+/*    .service {*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+/*    .service > div {*/
+/*        flex-basis: 30%;*/
+/*    }*/
+/*}*/
+
